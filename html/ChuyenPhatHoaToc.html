@@ -870,6 +870,205 @@
   <script>
     AOS.init({
     });
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    $(document).ready(function () {
+      // show firt menu
+      // $("#nav li").first().addClass("active").find("ul").show();
+
+      $("#nav > li > a").click(function (e) {
+        e.preventDefault();
+
+        var $submenu = $(this).next("ul");
+
+        if (!$(this).hasClass("active")) {
+          $("#nav li ul").slideUp();
+          $submenu.slideDown();
+          $("#nav li a").removeClass("active");
+          $(this).addClass("active");
+        } else {
+          $submenu.slideUp();
+          $(this).removeClass("active");
+        }
+      });
+    });
+    var swiper = new Swiper(".swiper-container", {
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    let tabsActive = 1;
+
+    function activeTab(data) {
+      for (let i = 1; i <= 2; i++) {
+        const wrapper = document.getElementById(`wrapper_${i}`);
+        wrapper.style.display = "none";
+      }
+      const selectedWrapper = document.getElementById(`wrapper_${data}`);
+      selectedWrapper.style.display = "flex";
+
+      for (let i = 1; i <= 2; i++) {
+        const tabText = document.getElementById(`tab${i}Text`);
+        const tabIndicator = document.getElementById(`tab${i}Indicator`);
+
+        tabText.classList.remove("active-p");
+        tabIndicator.style.height = "0";
+      }
+
+      const selectedTabText = document.getElementById(`tab${data}Text`);
+      const selectedTabIndicator = document.getElementById(`tab${data}Indicator`);
+
+      selectedTabText.classList.add("active-p");
+      selectedTabIndicator.style.height = "5px";
+      selectedTabIndicator.style.width = "60%";
+
+      tabsActive = data;
+    }
+    window.addEventListener("load", activeTab(1));
+    new SlimSelect({
+      select: "#selectElement",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement2",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement3",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement4",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement5",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement6",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    document
+      .querySelectorAll(".lvideo")
+      .forEach((d) => d.addEventListener("click", playVideos));
+    const body = document.body;
+
+    function playVideos(e) {
+      lvideo(e.currentTarget.dataset.url);
+
+      body.classList.add("lvideo-active");
+
+      var lvideoWrap = document.createElement("DIV");
+      lvideoWrap.setAttribute("id", "lvideo-wrap");
+      document.body.appendChild(lvideoWrap);
+
+      const wrapper = document.getElementById("lvideo-wrap");
+      wrapper.classList.add("active");
+
+      const url = this.dataset.url;
+
+      const startModal = `<span onclick="lvideoClose();" class="lvideo-overlay"></span> <div class="lvideo-container">`;
+      const finishModal = `</div><button onclick="lvideoClose();" class="lvideo-close">x</button>`;
+
+      if (url.indexOf("youtube") !== -1 || url.indexOf("youtu") !== -1) {
+        const ytUrl = [this.dataset.url];
+
+        var i,
+          r,
+          regExp =
+            /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
+
+        for (i = 0; i < ytUrl.length; ++i) {
+          r = ytUrl[i].match(regExp);
+
+          document.getElementById(
+            "lvideo-wrap"
+          ).innerHTML = `${startModal}<iframe width="560" height="315" title="YouTube Video" src='https://www.youtube.com/embed/${r[1]}?rel=0&autoplay=1&mute=1&loop=1&playlist=${r[1]}' frameborder="0" allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>${finishModal}`;
+        }
+      } else if (url.indexOf("vimeo") !== -1) {
+        const vimeoURL = this.dataset.url;
+        const regExp = /https:\/\/(www\.)?vimeo.com\/(\d+)($|\/)/;
+
+        const match = vimeoURL.match(regExp);
+
+        if (match) {
+          document.getElementById(
+            "lvideo-wrap"
+          ).innerHTML = `${startModal}<iframe title="Vimeo" src="https://player.vimeo.com/video/${match[2]}?autoplay=1&loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>${finishModal}`;
+        } else {
+          alert("Not a Vimeo!  URL example:\n https://vimeo.com/120206922");
+        }
+      } else if (url.indexOf("mp4") !== -1 || url.indexOf("m4v") !== -1) {
+        document.getElementById(
+          "lvideo-wrap"
+        ).innerHTML = `${startModal}<video controls loop playsinline autoplay><source src='${this.dataset.url}' type="video/mp4"></video>${finishModal}`;
+      } else {
+        alert("No video link found.");
+      }
+    }
+
+    const lvideoClose = () => {
+      body.classList.remove("lvideo-active");
+
+      const wrapper = document.getElementById("lvideo-wrap");
+      wrapper.parentNode.removeChild(wrapper);
+    };
+
+    function lvideo() { }
+    jQuery(document).ready(function ($) {
+      $(".slick.marquee").slick({
+        speed: 8000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        centerMode: false,
+        cssEase: "linear",
+        slidesToShow: 1,
+        draggable: false,
+        focusOnSelect: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: true,
+        initialSlide: 1,
+        arrows: false,
+        buttons: false,
+      });
+    });
+
+    jQuery(document).ready(function ($) {
+      $(".slick.marquee_rtl").slick({
+        speed: 8000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        centerMode: false,
+        cssEase: "linear",
+        draggable: false,
+        focusOnSelect: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: true,
+        initialSlide: 1,
+        arrows: false,
+        buttons: false,
+        rtl: true,
+      });
+    });
   </script>
 </body>
 

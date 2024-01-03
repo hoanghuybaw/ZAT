@@ -3550,3 +3550,33 @@ div[role="combobox"] {
   height: 40px;
   border-radius: 8px;
 }
+.slick-track {
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  overflow: visible !important;
+}
+.slick-list {
+  padding: 0 !important;
+  overflow: visible !important;
+}
+
+.slick-slide {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.slick-slide .inner {
+  margin: 0 15px;
+}
+
+.marquee_rtl,
+.marquee {
+  transform: scale(0.8, 0.8);
+  margin-top: 0px;
+}
+
+.hide {
+  display: none !important;
+}
