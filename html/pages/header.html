@@ -1,60 +1,5 @@
 <style>
-  .header-content {
-    z-index: 52;
-  }
-  .sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 51;
-    top: 0;
-    left: 0;
-    background-color: #fff;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-    text-align: center;
-  }
 
-  .sidenav .closebtn {
-    justify-content: space-between;
-    display: flex;
-    padding: 0 1rem;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    font-size: 36px;
-  }
-  .nav-menu {
-    #nav {
-      text-align: left;
-      float: left;
-      width: 100%;
-    }
-    #nav li a {
-      display: block;
-      padding: 10px 15px;
-      text-decoration: none;
-    }
-    #nav li a:hover,
-    #nav li a.active {
-    }
-    #nav li ul {
-      display: none;
-    }
-    #nav li ul li a {
-      padding: 10px 25px;
-    }
-  }
-
-  @media screen and (max-height: 450px) {
-    .sidenav {
-      padding-top: 15px;
-    }
-    .sidenav a {
-      font-size: 18px;
-    }
-  }
 </style>
 <header class="bg-ZAT">
   <div
@@ -72,11 +17,11 @@
     <div
       class="mb-4 ml-2 flex items-center max-md:hidden md:mb-0 md:self-center"
     >
-      <img src="/asset//icon/iconphonen.svg" alt="Nhất Tín" /><a
+      <img class="text-textheader" src="/asset//icon/iconphonen.svg" alt="Nhất Tín" /><a
         href="tel:1900 63 6688"
       >
         <p
-          class="w-[98px] text-center text-base font-medium leading-[25px] text-zinc-600"
+          class=" w-[98px] text-center text-base font-medium leading-[25px]"
         >
           1900 63 6688
         </p>
@@ -85,10 +30,10 @@
         <a
           href="https://khachhang.ZATExpress.vn/login?url=https://ZATExpress.vn/"
           aria-label="Đăng nhập"
-          class="inline-flex h-[33px] w-[159px] items-center justify-center gap-2.5 rounded-md border border-zinc-600 px-[13px] py-2"
+          class="inline-flex h-[33px] w-[159px] items-center justify-center gap-2.5 rounded-md border px-[13px] py-2"
         >
           <div
-            class="text-center text-[14px] font-medium leading-[25px] text-zinc-600"
+            class="text-center text-[14px] font-medium leading-[25px] text-textheader"
           >
             Đăng nhập / Đăng ký
           </div>

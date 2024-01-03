@@ -4,31 +4,1218 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/css/default.css" as="style" />
-  <link rel="stylesheet" href="/css/table.css" as="style" />
+  <link rel="stylesheet" href="../css/default.css" as="style" />
+  <link rel="stylesheet" href="../css/table.css" as="style" />
+  <link rel="stylesheet" href="../css/header.css" as="style" />
+  <link rel="stylesheet" href="../css/introduce.css" as="style" />
+  <link rel="stylesheet" href="../css/searchCheced.css" as="style" />
+  <link rel="stylesheet" href="../css/service.css" as="style" />
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
   <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
   </link>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
   <title>ZAT express</title>
+  <style>
+    .banner {
+      background: url("../asset/img/Banner.png");
+    }
+  </style>
 </head>
 
 <body>
   <main class="__Home bg-bacground">
-    <div id="header"></div>
-    <div id="navBar"></div>
-    <div id="slider"></div>
-    <div id="search" class="flex justify-center"></div>
-    <div id="service" class="flex justify-center"></div>
-    <div id="banner" class="flex justify-center"></div>
-    <div id="network" class="flex justify-center"></div>
-    <div id="introduce" class="flex justify-center"></div>
-    <div id="newspaper" class="flex justify-center"></div>
-    <div id="custommer" class="flex justify-center"></div>
+    <header class="bg-ZAT">
+      <div
+        class="header-content container mx-auto flex h-[61px] w-full items-center justify-between py-3 max-md:flex-row-reverse max-md:px-4">
+        <div class="flex justify-between">
+          <a class="flex items-center" href="../html/index.html"><img src="../asset/icon/logont.png"
+              class="mr-1 inline-block object-contain w-[100px]" alt="ZAT express" loading="lazy" /></a>
+        </div>
+        <div class="mb-4 ml-2 flex items-center max-md:hidden md:mb-0 md:self-center">
+          <img class="text-textheader" src="../asset//icon/iconphonen.svg" alt="Nhất Tín" /><a href="tel:1900 63 6688">
+            <p class="text-textheader w-[98px] text-center text-base font-medium leading-[25px]">
+              1900 63 6688
+            </p>
+          </a>
+          <div class="mx-[10px] hidden items-center md:flex">
+            <a href="https://khachhang.ZATExpress.vn/login?url=https://ZATExpress.vn/" aria-label="Đăng nhập"
+              class="inline-flex h-[33px] w-[159px] items-center justify-center gap-2.5 rounded-md border px-[13px] py-2">
+              <div class="text-center text-[14px] font-medium leading-[25px] text-textheader">
+                Đăng nhập / Đăng ký
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="md:hidden">
+          <span style="font-size: 30px; cursor: pointer" onclick="openNav()">&#9776;</span>
+        </div>
+        <div id="mySidenav" class="sidenav">
+          <div class="closebtn bg-ZAT">
+            <a href="javascript:void(0)" onclick="closeNav()">&times;</a>
+            <a class="flex items-center" href="/"><img src="../asset/icon/logont.png"
+                class="mr-1 inline-block object-contain w-[100px]" alt="ZAT express" loading="lazy" /></a>
+          </div>
+          <div class="nav-menu">
+            <ul id="nav">
+              <li>
+                <a style="display: flex; justify-content: space-between"
+                  class="text-16 font-semibold text-Sub_Color_3 flex" href="#">Dịch vụ
+                  <img style="width: 10px" src="../asset/icon/down-arrow-svgrepo-com.svg" alt="" />
+                </a>
+                <ul>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát Hoả tốc</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát Nhanh</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát tiết kiệm</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát Quốc tế</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="font-semibold text-Sub_Color_3" href="#">Bảng giá</a>
+              </li>
+              <li>
+                <a class="font-semibold text-Sub_Color_3" href="#"
+                  style="display: flex; justify-content: space-between">Hỗ trợ khách hàng
+                  <img style="width: 10px" src="../asset/icon/down-arrow-svgrepo-com.svg" alt="" /></a>
+                <ul>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Câu hỏi thường gặp</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Điều khoản Dịch vụ</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chính sách</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="font-semibold font-semibold text-Sub_Color_3" href="#">Tuyển dụng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mx-4">
+            <button
+              class="w-full inline-flex items-center justify-center text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-10 py-2 px-4 whitespace-nowrap mt-[20px] rounded-3xl border border-Gray_6 bg-Gray_6 text-Sub_Color_1"
+              type="submit">
+              <div class="flex items-center justify-center">
+                <img src="../asset/icon/phoneloc.svg" alt="Nhất Tín" /><a href="tel:1900 63 6688">
+                  <p class="pl-2 text-16 font-semibold text-Sub_Color_1">
+                    1900 63 6688
+                  </p>
+                </a>
+              </div>
+            </button>
+          </div>
+          <div class="mx-4">
+            <button
+              class="w-full inline-flex items-center justify-center text-sm font-semibold transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-10 py-2 px-4 whitespace-nowrap mt-2 rounded-3xl border border-black bg-black text-Main_Color_3"
+              type="submit">
+              <a class="py-2 font-semibold text-Main_Color_3" href="https://khachhang.ZATExpress.vn/register">Đăng nhập
+                / Đăng ký</a>
+            </button>
+          </div>
+          <div class="mt-5 pb-2 text-16 font-semibold text-Sub_Color_3 md:hidden text-left pl-2">
+            <span class="font-semibold">Trụ sở chính<!-- -->:</span>
+            <!-- -->18A Cộng Hòa, Phường 12, Quận Tân Bình, Tp. Hồ Chí Minh
+          </div>
+          <div class="pb-2 text-16 font-semibold text-Sub_Color_3 md:hidden text-left pl-2">
+            <span class="font-semibold">Giờ làm việc<!-- -->:</span>
+            <!-- -->07:00 - 20:00
+          </div>
+          <div class="flex pb-2 text-16 font-semibold text-Sub_Color_3 md:hidden text-left pl-2">
+            <span class="font-semibold">Email:</span><a class="pl-2" href="mailto:ZAT@ZATExpress.vn">
+              <div>ZAT@ZATExpress.vn</div>
+            </a>
+          </div>
+          <div class="pb-2 text-16 font-semibold text-Sub_Color_3 md:hidden text-left pl-2">
+            <span class="font-semibold">Hotline:</span><a class="pl-2" href="tel:1900 63 6688">1900 63 6688</a>
+          </div>
+          <div class="h-[1px] w-full bg-Sub_Color_1"></div>
+          <div class="nav-menu">
+            <ul id="nav">
+              <li>
+                <a style="display: flex; justify-content: space-between"
+                  class="text-16 font-semibold text-Sub_Color_3 flex" href="#">Dịch vụ
+                  <img style="width: 10px" src="../asset/icon/down-arrow-svgrepo-com.svg" alt="" />
+                </a>
+                <ul>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát Hoả tốc</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát Nhanh</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát tiết kiệm</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chuyển phát Quốc tế</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="font-semibold text-Sub_Color_3" href="#">Bảng giá</a>
+              </li>
+              <li>
+                <a class="font-semibold text-Sub_Color_3" href="#"
+                  style="display: flex; justify-content: space-between">Hỗ trợ khách hàng
+                  <img style="width: 10px" src="../asset/icon/down-arrow-svgrepo-com.svg" alt="" /></a>
+                <ul>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Câu hỏi thường gặp</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Điều khoản Dịch vụ</a>
+                  </li>
+                  <li>
+                    <a class="pt-2 text-14 font-normal text-Sub_Color_3" href="#">Chính sách</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a class="font-semibold font-semibold text-Sub_Color_3" href="#">Tuyển dụng</a>
+              </li>
+            </ul>
+          </div>
+          <div class="flex w-full justify-start pl-2">
+            <a target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="49"
+                class="max-md:mr-2 md:mr-5" style="color: transparent" src="../asset/icon/Facebook.svg" /></a><a
+              target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="49"
+                class="max-md:mx-2 md:mr-5" style="color: transparent" src="../asset/icon/Zalo.svg" /></a><a
+              target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="49"
+                class="max-md:mx-2 md:mr-5" style="color: transparent" src="../asset/icon/Youtube.svg" /></a>
+          </div>
+          <div class="flex justify-start max-md:justify-between max-md:pt-7 mx-2">
+            <a target="_blank" href="/"><img alt="logoblack" loading="lazy" width="164" height="46" class="md:mr-5"
+                style="color: transparent" src="../asset/icon/appstore.svg" /></a><a target="_blank" href="/"><img
+                alt="logoblack" loading="lazy" width="164" height="46" class="md:mr-5" style="color: transparent"
+                src="../asset/icon/playstore.svg" /></a>
+          </div>
+          <p class="pt-5 text-15 font-medium">© 2023 ZAT express</p>
+        </div>
+      </div>
+    </header>
+    <div style="position: absolute"
+      class="z-50 flex h-[45px] w-full items-center justify-center bg-bgheader p-2 max-md:hidden">
+      <nav
+        class="hidden h-[calc(100vh-100px)] w-full items-center overflow-y-auto pl-8 pr-4 text-textheader md:flex md:h-auto md:w-auto md:overflow-visible"
+        aria-label="Main navigation">
+        <ul class="flex w-full flex-col pt-8 text-xl md:w-auto md:flex-row md:self-center md:pt-0 md:text-18">
+          <li class="dropdown mx-4">
+            <a class="flex items-center px-6 py-3 font-normal text-textheader transition duration-150 ease-in-out"
+              href="../html/ChuyenPhatHoaToc.html">Dịch vụ<img class="pl-1" src="../asset/icon/downwhite.svg"
+                alt="ZAT Express" /></a>
+            <ul
+              class="dropdown-menu z-50 mt-[-2px] pl-4 font-normal drop-shadow-xl md:absolute md:hidden md:min-w-[200px] md:bg-white md:pl-0">
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="../html/ChuyenPhatHoaToc.html">Chuyển phát Hoả tốc</a>
+              </li>
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="../html/ChuyenPhatHoaToc.html">Chuyển phát Nhanh</a>
+              </li>
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="../html/ChuyenPhatHoaToc.html">Chuyển phát tiết kiệm</a>
+              </li>
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="../html/ChuyenPhatHoaToc.html">Chuyển phát Quốc tế</a>
+              </li>
+            </ul>
+          </li>
+          <li class="">
+            <a class="flex items-center px-6 py-3 font-normal text-textheader transition duration-150 ease-in-out"
+              href="bang-gia.html">Bảng giá</a>
+          </li>
+          <li class="dropdown mx-4">
+            <a class="flex items-center px-6 py-3 font-normal text-textheader transition duration-150 ease-in-out"
+              href="cau-hoi-thuong-gap.html">Hỗ trợ khách hàng<img class="pl-1" src="../asset/icon/downwhite.svg"
+                alt="ZAT Express" /></a>
+            <ul
+              class="dropdown-menu z-50 mt-[-2px] pl-4 font-normal drop-shadow-xl md:absolute md:hidden md:min-w-[200px] md:bg-white md:pl-0">
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="/">Câu hỏi thường gặp</a>
+              </li>
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="/">Điều khoản Dịch vụ</a>
+              </li>
+              <li>
+                <a class="whitespace-no-wrap block px-4 py-3 text-16 font-normal text-[#8B8B8B] md:hover:bg-black md:hover:text-ZAT"
+                  href="/">Chính sách</a>
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown mx-4">
+            <a target="_blank"
+              class="flex items-center px-6 py-3 font-normal text-textheader transition duration-150 ease-in-out"
+              href="/">Tuyển dụng</a>
+            <ul
+              class="dropdown-menu z-50 mt-[-2px] pl-4 font-normal drop-shadow-xl md:absolute md:hidden md:min-w-[200px] md:bg-white md:pl-0">
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="swiper-container overflow-hidden md:hero w-full max-md:h-[177px] max-md:rounded md:h-[585px]">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide"><img src="../asset/img/Banner.png" alt="" /></div>
+        <div class="swiper-slide"><img src="../asset/img/Banner.png" alt="" /></div>
+        <div class="swiper-slide"><img src="../asset/img/Banner.png" alt="" /></div>
+      </div>
+      <!-- <div class="swiper-button-next"></div>
+  <div class="swiper-button-prev"></div> -->
+    </div>
+    <div class="flex justify-center">
+      <div class="functab container flex w-full flex-col items-center justify-center max-md:mt-4">
+        <div class="functab container mt-10 flex w-full flex-col items-center justify-center max-md:mt-4"
+          data-aos="fade-down" data-aos-duration="2000">
+          <div class="tabfunction mb-4 flex items-center justify-center">
+            <button class="flex flex-col items-center justify-center" onclick="activeTab(1)">
+              <p id="tab1Text" class="text-20 max-md:text-15 px-4 font-medium max-md:px-2 py-2">
+                Tra cứu vận đơn
+              </p>
+              <div id="tab1Indicator" class="rounded-[10px] bg-ZAT"></div>
+            </button>
+            <button class="flex flex-col items-center justify-center" onclick="activeTab(2)">
+              <p id="tab2Text" class="text-20 max-md:text-14 px-4 font-medium max-md:px-2 py-2">
+                Ước tính cước phí
+              </p>
+              <div id="tab2Indicator" class="rounded-[10px] bg-ZAT"></div>
+            </button>
+          </div>
+        </div>
+        <div id="wrapper_1"
+          class="_loading_overlay_wrapper css-79elbk boxfunc w-full flex flex-col items-center justify-center"
+          data-aos="fade-up" data-aos-duration="1500">
+          <div class="my-2 flex w-10/12 flex-col rounded-2xl bg-white p-5 shadow-2xl max-md:w-11/12 max-md:p-2">
+            <div class="flex w-full items-center space-x-4 max-md:space-x-2">
+              <input
+                class="flex w-full border border-neutral-200 py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 h-[55px] rounded-md bg-bginput text-[20px] max-md:h-[44px] max-md:text-15"
+                type="text" placeholder="Nhập mã vận đơn" value="" />
+              <a href="../html/Tracuu.html"><button
+                  class="text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 whitespace-nowrap inline-flex h-[55px] w-[137px] items-center justify-center gap-2.5 rounded-md border border-black bg-white px-[13px] py-2 text-slate-900 hover:bg-[#dd0506] hover:text-ZAT max-md:h-[44px]"
+                  type="submit">
+                  <p class="text-center text-[20px] font-medium leading-normal">
+                    Tra cứu
+                  </p>
+                </button></a>
+            </div>
+            <p class="pt-3 max-md:text-13">
+              Nhập tối đa 30 vận đơn, mỗi mã cách nhau dấu phẩy VD:
+              392773302,968835288
+            </p>
+            <p class="max-md:text-13">
+              Mọi thắc mắc vui lòng liên hệ hotline:
+              <a href="tel:1900 63 6688"><span class="font-medium text-link">1900 63 6688</span></a>
+              hoặc Email:
+              <a href="mailto:ZAT@ZATExpress.vn"><span class="font-medium text-link">ZAT@ZATExpress.vn</span></a>
+            </p>
+          </div>
+        </div>
+        <div id="wrapper_2"
+          class="_loading_overlay_wrapper css-79elbk boxfunc flex w-full flex-col items-center justify-center">
+          <div
+            class="my-2 grid w-10/12 items-end gap-2 rounded-2xl bg-white p-4 shadow-2xl max-md:w-11/12 max-md:grid-cols-2 md:grid-cols-4">
+            <p class="w-full text-[20px] font-medium text-black max-md:col-span-2 md:col-span-4">
+              Nhập thông tin bưu kiện
+            </p>
+            <div class="col-span-1">
+              <p class="py-1 text-18">Nơi gửi</p>
+              <select class="pt-2 select-box" id="selectElement"></select>
+            </div>
+            <div class="col-span-1">
+              <select class="pt-2 select-box" id="selectElement2"></select>
+            </div>
+            <div class="col-span-1">
+              <p class="py-1 text-18">Nơi Nhận</p>
+              <select class="pt-2 select-box" id="selectElement3"></select>
+            </div>
+            <div class="col-span-1">
+              <select class="pt-2 select-box" id="selectElement4"></select>
+            </div>
+            <div class="col-span-1">
+              <p class="py-1 text-18">Số kiện</p>
+              <input
+                class="flex h-10 rounded-md border border-neutral-200 bg-transparent py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 w-full false"
+                type="text" placeholder="Nhập số kiện" value="" />
+            </div>
+            <div class="col-span-1">
+              <p class="py-1 text-18">Trọng lượng(Kg)</p>
+              <input
+                class="flex h-10 rounded-md border border-neutral-200 bg-transparent py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 w-full false"
+                type="text" placeholder="Nhập trọng lượng" value="" />
+            </div>
+            <div class="col-span-1">
+              <p class="py-1 text-18">Số tiền thu hộ</p>
+              <input
+                class="flex h-10 rounded-md border border-neutral-200 bg-transparent py-2 px-3 placeholder:text-bordercargo disabled:cursor-not-allowed disabled:opacity-50 w-full false"
+                type="text" placeholder="Nhập số tiền thu hộ" value="" />
+            </div>
+            <button
+              class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-10 py-2 px-4 whitespace-nowrap w-full rounded bg-zinc-600 text-Main_Color_3 shadow"
+              type="submit">
+              <div class="text-center text-[18px] font-medium leading-normal text-amber-100">
+                Tra giá
+              </div>
+            </button>
+
+            <div class="mt-4 h-[0px] w-full border border-dotted border-stone-300 max-md:col-span-2 md:col-span-4">
+            </div>
+            <p class="py-2 text-[20px] font-medium text-black max-md:col-span-2">
+              Giá cước vận chuyển
+            </p>
+            <div
+              class="col-span-4 mb-2 grid grid-cols-3 gap-x-[32px] gap-y-[20px] max-md:col-span-2 max-md:grid-cols-1">
+              <div
+                class="relative col-span-1 h-[224px] cursor-pointer rounded-2xl border border-neutral-200 p-4 hover:bg-ZAT">
+                <p class="text-[24px] font-medium text-slate-900">Tiết kiệm</p>
+                <div class="flex w-full items-center justify-between">
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Giá cước (VNĐ):
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      25.000
+                    </p>
+                  </div>
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Phí COD (VNĐ):
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      0
+                    </p>
+                  </div>
+                </div>
+                <div class="flex w-full items-center justify-between">
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Phí ngoại thành xa:
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      0
+                    </p>
+                  </div>
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Thời gian toàn trình:
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      2 ngày
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <button
+                    class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-[28px] w-[100px] py-2 px-4 whitespace-nowrap rounded border border-zinc-600 bg-transparent text-14">
+                    <p class="text-center text-[14px] font-medium leading-normal text-zinc-600">
+                      Tạo đơn
+                    </p>
+                  </button><img src="../asset/icon/tietkiem.svg" width="60" height="60"
+                    class="h-[60px] w-[60px] max-md:h-[60px] max-md:w-[60px]" alt="Nhất tín" loading="lazy"
+                    style="object-fit: contain" />
+                </div>
+              </div>
+              <div
+                class="relative col-span-1 h-[224px] cursor-pointer rounded-2xl border border-neutral-200 p-4 hover:bg-ZAT">
+                <p class="text-[24px] font-medium text-slate-900">CPN</p>
+                <div class="flex w-full items-center justify-between">
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Giá cước (VNĐ):
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      20.000
+                    </p>
+                  </div>
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Phí COD (VNĐ):
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      0
+                    </p>
+                  </div>
+                </div>
+                <div class="flex w-full items-center justify-between">
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Phí ngoại thành xa:
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      0
+                    </p>
+                  </div>
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Thời gian toàn trình:
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      1 ngày
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between pb-2">
+                  <button
+                    class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-[28px] w-[100px] py-2 px-4 whitespace-nowrap rounded border border-zinc-600 bg-transparent text-14">
+                    <p class="text-center text-[14px] font-medium leading-normal text-zinc-600">
+                      Tạo đơn
+                    </p>
+                  </button><img src="../asset/icon/cpn.svg" width="60" height="60"
+                    class="h-[60px] w-[60px] max-md:h-[60px] max-md:w-[60px]" alt="Nhất tín" loading="lazy"
+                    style="object-fit: contain" />
+                </div>
+              </div>
+              <div
+                class="relative col-span-1 h-[224px] cursor-pointer rounded-2xl border border-neutral-200 p-4 hover:bg-ZAT">
+                <p class="text-[24px] font-medium text-slate-900">Hoả tốc</p>
+                <div class="flex w-full items-center justify-between">
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Giá cước (VNĐ):
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      37.000
+                    </p>
+                  </div>
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Phí COD (VNĐ):
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      0
+                    </p>
+                  </div>
+                </div>
+                <div class="flex w-full items-center justify-between">
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Phí ngoại thành xa:
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      0
+                    </p>
+                  </div>
+                  <div class="flex w-1/2 flex-col justify-start">
+                    <p class="text-[12px] font-light leading-normal text-slate-900">
+                      Thời gian toàn trình:
+                    </p>
+                    <p class="text-[16px] font-medium leading-normal text-slate-900">
+                      8 giờ
+                    </p>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <button
+                    class="inline-flex items-center justify-center text-sm font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 disabled:opacity-50 dark:focus:ring-slate-400 disabled:pointer-events-none dark:focus:ring-offset-slate-900 data-[state=open]:bg-slate-100 dark:data-[state=open]:bg-slate-800 h-[28px] w-[100px] py-2 px-4 whitespace-nowrap rounded border border-zinc-600 bg-transparent text-14">
+                    <p class="text-center text-[14px] font-medium leading-normal text-zinc-600">
+                      Tạo đơn
+                    </p>
+                  </button><img src="../asset/icon/hoatoc.svg" width="60" height="60" class="h-[60px] w-[60px]"
+                    alt="Nhất tín" loading="lazy" style="object-fit: contain" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="container mt-14 flex w-full flex-col items-center justify-center max-md:mt-8 max-md:px-2">
+        <h2 class="text-center text-32 font-medium text-Sub_Color_3 max-md:text-20">
+          Dịch vụ
+        </h2>
+        <div class="mt-5 flex h-[500px] w-full items-center justify-between max-md:hidden gap-4">
+          <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800"
+            class="card-content relative mx-2 flex cursor-pointer rounded-2xl bg-white pb-2 max-md:h-[64px]">
+            <div class="content">
+              <h2 class="title">Chuyển phát nhanh</h2>
+              <p class="copy">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa nhanh chóng với quy
+                trình thủ tục giao, nhận đơn giản và thuận tiện
+              </p>
+              <!-- <button class="btn">View Trips</button> -->
+            </div>
+          </div>
+
+          <div data-aos="zoom-in" data-aos-delay="500"
+            class="card-content relative mx-2 flex cursor-pointer rounded-2xl bg-white pb-2 max-md:h-[64px]">
+            <div class="content">
+              <h2 class="title">Chuyển phát Hoả tốc</h2>
+              <p class="copy">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa trong thời gian
+                nhanh nhất, có thể hẹn giờ giao, Chuyển Phát Hỏa tốc đáp ứng nhu cầu
+                cấp bách về thời gian giao hàng của Quý khách
+              </p>
+              <!-- <button class="btn">View Trips</button> -->
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="700" data-aos-duration="800"
+            class="card-content relative mx-2 flex cursor-pointer rounded-2xl bg-white pb-2 max-md:h-[64px]">
+            <div class="content">
+              <h2 class="title">Chuyển phát nhanh</h2>
+              <p class="copy">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa trong thời gian
+                nhanh nhất, có thể hẹn giờ giao, Chuyển Phát Hỏa tốc đáp ứng nhu cầu
+                cấp bách về thời gian giao hàng của Quý khách
+              </p>
+              <!-- <button class="btn">Book Now</button> -->
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="900" data-aos-duration="800"
+            class="card-content relative mx-2 flex cursor-pointer rounded-2xl bg-white pb-2 max-md:h-[64px]">
+            <div class="content">
+              <h2 class="title">Chuyển phát nhanh</h2>
+              <p class="copy">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa trong thời gian
+                nhanh nhất, có thể hẹn giờ giao, Chuyển Phát Hỏa tốc đáp ứng nhu cầu
+                cấp bách về thời gian giao hàng của Quý khách
+              </p>
+              <!-- <button class="btn">Book Now</button> -->
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 flex w-full flex-col items-center justify-center md:hidden">
+          <a class="relative m-2 flex cursor-pointer flex-col items-center justify-start overflow-hidden rounded-2xl bg-ZAT pb-2 mx-2"
+            href="/">
+            <div class="cardbot flex flex-col items-center justify-center text-Sub_Color_1">
+              <span class="px-6 py-4 text-center text-20 font-medium">Chuyển phát Nhanh</span>
+              <p class="desstring mx-2 pb-2 text-center text-14 font-medium">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa nhanh chóng với quy
+                trình thủ tục giao, nhận đơn giản và thuận tiện
+              </p>
+            </div>
+          </a>
+          <a class="relative m-2 flex cursor-pointer flex-col items-center justify-start overflow-hidden rounded-2xl bg-ZAT pb-2"
+            href="/">
+            <div class="cardbot flex flex-col items-center justify-center text-Sub_Color_1">
+              <span class="px-6 py-4 text-center text-20 font-medium">Chuyển phát Nhanh</span>
+              <p class="desstring mx-2 pb-2 text-center text-14 font-medium">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa nhanh chóng với quy
+                trình thủ tục giao, nhận đơn giản và thuận tiện
+              </p>
+            </div>
+          </a>
+          <a class="relative m-2 flex cursor-pointer flex-col items-center justify-start overflow-hidden rounded-2xl bg-ZAT pb-2"
+            href="/">
+            <div class="cardbot flex flex-col items-center justify-center text-Sub_Color_1">
+              <span class="px-6 py-4 text-center text-20 font-medium">Chuyển phát Nhanh</span>
+              <p class="desstring mx-2 pb-2 text-center text-14 font-medium">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa nhanh chóng với quy
+                trình thủ tục giao, nhận đơn giản và thuận tiện
+              </p>
+            </div>
+          </a>
+          <a class="relative m-2 flex cursor-pointer flex-col items-center justify-start overflow-hidden rounded-2xl bg-ZAT pb-2"
+            href="/">
+            <div class="cardbot flex flex-col items-center justify-center text-Sub_Color_1">
+              <span class="px-6 py-4 text-center text-20 font-medium">Chuyển phát Nhanh</span>
+              <p class="desstring mx-2 pb-2 text-center text-14 font-medium">
+                Là dịch vụ giao, nhận chứng từ, bưu phẩm, hàng hóa nhanh chóng với quy
+                trình thủ tục giao, nhận đơn giản và thuận tiện
+              </p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="banner mt-8 flex w-full flex-col items-center justify-center overflow-hidden max-md:mt-8">
+        <div class="choice relative mt-5 h-[600px] w-full overflow-hidden max-md:mt-0 max-md:h-[300px]">
+          <div
+            class="box absolute flex flex-col rounded-lg bg-bgvideo p-7 max-md:top-[0px] max-md:h-[300px] max-md:bg-transparent max-md:p-4 md:right-[121px] md:top-[150px] md:h-[314px] md:w-[506px]">
+            <div class="absolute z-[-1] h-[90%] w-[92%] rounded-[10px] bg-Sub_Color_3 opacity-90 md:hidden"></div>
+            <h2 class="text-left text-24 font-medium text-Main_Color_3 max-md:p-2 max-md:px-4 max-md:text-20">
+              Vì sao lại chọn ZAT Express
+            </h2>
+            <p class="py-1 text-justify text-18 font-medium text-white max-md:px-4 max-md:text-16">
+              Chúng tôi cung cấp đa dạng các giải pháp logistics tối ưu khắp 63 tỉnh
+              thành, đáp ứng mọi nhu cầu của Đối tác Doanh nghiệp & Khách hàng Cá nhân
+              với văn hóa phục vụ
+              <br /><span class="text-ZAT">Thân thiện – Nhiệt tình – Tận tâm</span>
+            </p>
+            <div class="flex items-center justify-start py-1 max-md:px-4">
+              <img src="../asset/icon/check.png" alt="Check" />
+              <p class="pl-2 text-justify text-18 font-medium text-white max-md:text-16">
+                Hoàn tiền COD chỉ trong 24H
+              </p>
+            </div>
+            <div class="flex items-center justify-start py-1 max-md:px-4">
+              <img src="../asset/icon/check.png" alt="Check" />
+              <p class="pl-2 text-justify text-18 font-medium text-white max-md:text-16">
+                Miễn cước thu hộ lên đến 5 Triệu đồng
+              </p>
+            </div>
+            <div class="flex items-center justify-start py-1 max-md:px-4">
+              <img src="../asset/icon/check.png" alt="Check" />
+              <p class="pl-2 text-justify text-18 font-medium text-white max-md:text-16">
+                Mạng lưới phủ sóng 63 tỉnh thành
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="boxxnet mt-14 flex w-full flex-col items-center justify-center max-md:mt-8">
+        <h2 class="text-center text-[32px] font-normal leading-[25px] text-slate-800 max-md:text-20">
+          Mạng lưới phủ sóng 63 tỉnh thành
+        </h2>
+        <div class="mt-8 grid grid-cols-3 max-md:grid-cols-2 max-md:gap-[32px] md:gap-[60px]">
+          <div data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800"
+            class="boxnet relative col-span-1 flex h-[180px] cursor-pointer flex-col items-center justify-between max-md:h-[150px] max-md:border-0">
+            <img alt="Bưu cục &amp; Điểm nhận trả" loading="lazy" width="80" height="80"
+              class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[80px] max-md:w-[80px]"
+              style="color: transparent" src="../asset/icon/1.svg" />
+            <div class="flex flex-col">
+              <span
+                class="text-center text-[40px] font-light leading-[25px] text-zinc-600 max-md:text-[24px] md:px-6 md:pt-[25px]">+
+                400</span><span
+                class="pt-[10px] text-center text-xl font-medium leading-[25px] text-zinc-600 max-md:text-16 md:px-6">Bưu
+                cục &amp; Điểm nhận trả</span>
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800"
+            class="boxnet relative col-span-1 flex h-[180px] cursor-pointer flex-col items-center justify-between max-md:h-[150px] max-md:border-0">
+            <img alt="Phương tiện đa tải trọng" loading="lazy" width="80" height="80"
+              class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[80px] max-md:w-[80px]"
+              style="color: transparent" src="../asset/icon/2.svg" />
+            <div class="flex flex-col">
+              <span
+                class="text-center text-[40px] font-light leading-[25px] text-zinc-600 max-md:text-[24px] md:px-6 md:pt-[25px]">+
+                450</span><span
+                class="pt-[10px] text-center text-xl font-medium leading-[25px] text-zinc-600 max-md:text-16 md:px-6">Phương
+                tiện đa tải trọng</span>
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800"
+            class="boxnet relative col-span-1 flex h-[180px] cursor-pointer flex-col items-center justify-between max-md:h-[150px] max-md:border-0">
+            <img alt="Diện tích kho bãi" loading="lazy" width="80" height="80"
+              class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[80px] max-md:w-[80px]"
+              style="color: transparent" src="../asset/icon/3.svg" />
+            <div class="flex flex-col">
+              <span
+                class="text-center text-[40px] font-light leading-[25px] text-zinc-600 max-md:text-[24px] md:px-6 md:pt-[25px]">+
+                150.000 m2</span><span
+                class="pt-[10px] text-center text-xl font-medium leading-[25px] text-zinc-600 max-md:text-16 md:px-6">Diện
+                tích kho bãi</span>
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="700" data-aos-duration="800"
+            class="boxnet relative col-span-1 flex h-[180px] cursor-pointer flex-col items-center justify-between max-md:h-[150px] max-md:border-0">
+            <img alt="Nhân viên chính thức" loading="lazy" width="80" height="80"
+              class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[80px] max-md:w-[80px]"
+              style="color: transparent" src="../asset/icon/4.svg" />
+            <div class="flex flex-col">
+              <span
+                class="text-center text-[40px] font-light leading-[25px] text-zinc-600 max-md:text-[24px] md:px-6 md:pt-[25px]">4.300</span><span
+                class="pt-[10px] text-center text-xl font-medium leading-[25px] text-zinc-600 max-md:text-16 md:px-6">Nhân
+                viên chính thức</span>
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="900" data-aos-duration="800"
+            class="boxnet relative col-span-1 flex h-[180px] cursor-pointer flex-col items-center justify-between max-md:h-[150px] max-md:border-0">
+            <img alt="Đối tác doanh nghiệp" loading="lazy" width="80" height="80"
+              class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[80px] max-md:w-[80px]"
+              style="color: transparent" src="../asset/icon/5.svg" />
+            <div class="flex flex-col">
+              <span
+                class="text-center text-[40px] font-light leading-[25px] text-zinc-600 max-md:text-[24px] md:px-6 md:pt-[25px]">+
+                36.000</span><span
+                class="pt-[10px] text-center text-xl font-medium leading-[25px] text-zinc-600 max-md:text-16 md:px-6">Đối
+                tác doanh nghiệp</span>
+            </div>
+          </div>
+          <div data-aos="zoom-in" data-aos-delay="1100" data-aos-duration="800"
+            class="boxnet relative col-span-1 flex h-[180px] cursor-pointer flex-col items-center justify-between max-md:h-[150px] max-md:border-0">
+            <img alt="Khách hàng cá nhân" loading="lazy" width="80" height="80"
+              class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[80px] max-md:w-[80px]"
+              style="color: transparent" src="../asset/icon/6.svg" />
+            <div class="flex flex-col">
+              <span
+                class="text-center text-[40px] font-light leading-[25px] text-zinc-600 max-md:text-[24px] md:px-6 md:pt-[25px]">+
+                100.000</span><span
+                class="pt-[10px] text-center text-xl font-medium leading-[25px] text-zinc-600 max-md:text-16 md:px-6">Khách
+                hàng cá nhân</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="" class="flex justify-center">
+      <div class="container mt-14 flex w-full flex-col items-center justify-center">
+        <div class="card_introduce">
+          <div class="card-play">
+            <button class="lvideo btn-animated" data-url="https://www.youtube.com/watch?v=SBOAMiZWAqA">
+              <i></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="container">
+        <div class="mt-14 flex w-full flex-col items-center justify-center max-md:mt-8 max-md:overflow-hidden">
+          <h2 class="text-center text-32 font-medium text-Sub_Color_3 max-md:text-20">
+            Báo chí nói gì về ZAT Express ?
+          </h2>
+          <div
+            class="mt-8 overflow-x-auto max-md:flex max-md:w-full max-md:grid-cols-2 max-md:flex-nowrap max-md:gap-0 md:grid md:grid-cols-4 md:gap-6 md:pb-5">
+            <a target="_blank" href="/" data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+              <div
+                class="bgnew relative mb-2 flex h-[330px] cursor-pointer flex-col items-start justify-start p-5 pb-0 hover:drop-shadow-xl max-md:ml-4 max-md:h-[330px] max-md:w-[292px] max-md:flex-none max-md:border-0 md:col-span-1">
+                <img alt="Nối vòng tay lớn’: 400 phần quà tiếp tục đến với người dân khó khăn trên nhiều quận huyện"
+                  loading="lazy" width="75" height="75"
+                  class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[67px] max-md:w-[67px]"
+                  style="color: transparent" src="../asset/icon/kinhtesaigon.png" />
+                <p class="mt-2 text-left text-18 font-medium max-md:text-15">
+                  Nối vòng tay lớn’: 400 phần quà tiếp tục đến với người dân khó khăn
+                  trên nhiều quận huyện
+                </p>
+                <p class="text-left text-15 font-normal max-md:text-14">
+                  Khoảng cách đường bộ từ Hà Nội đến Đà Nẵng là khoảng 766 km. Nếu đi
+                  tuyến đường bộ nhanh ...
+                </p>
+              </div>
+            </a><a target="_blank" href="/" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+              <div
+                class="bgnew relative mb-2 flex h-[330px] cursor-pointer flex-col items-start justify-start p-5 pb-0 hover:drop-shadow-xl max-md:ml-4 max-md:h-[330px] max-md:w-[292px] max-md:flex-none max-md:border-0 md:col-span-1">
+                <img alt="ZAT Express: Đồng hành cùng tỉnh Bắc Giang và Bộ đội Biên phòng" loading="lazy" width="75"
+                  height="75"
+                  class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[67px] max-md:w-[67px]"
+                  style="color: transparent" src="../asset/icon/vtv3.png" />
+                <p class="mt-2 text-left text-18 font-medium max-md:text-15">
+                  ZAT Express: Đồng hành cùng tỉnh Bắc Giang và Bộ đội Biên
+                  phòng
+                </p>
+                <p class="text-left text-15 font-normal max-md:text-14">
+                  Những thước phim được ghi lại bởi Đài truyền hình Việt Nam (???)
+                  trong chiến dịch “Đồng hành ...
+                </p>
+              </div>
+            </a><a target="_blank" href="/" data-aos="zoom-in" data-aos-delay="500" data-aos-duration="800">
+              <div
+                class="bgnew relative mb-2 flex h-[330px] cursor-pointer flex-col items-start justify-start p-5 pb-0 hover:drop-shadow-xl max-md:ml-4 max-md:h-[330px] max-md:w-[292px] max-md:flex-none max-md:border-0 md:col-span-1">
+                <img alt="3PL/Fulfillment - giải pháp logistics hiện đại cho các doanh nghiệp" loading="lazy" width="75"
+                  height="75"
+                  class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[67px] max-md:w-[67px]"
+                  style="color: transparent" src="../asset/icon/vnexpress.png" />
+                <p class="mt-2 text-left text-18 font-medium max-md:text-15">
+                  3PL/Fulfillment - giải pháp logistics hiện đại cho các doanh nghiệp
+                </p>
+                <p class="text-left text-15 font-normal max-md:text-14">
+                  ZAT Express vừa ra mắt thị trường dịch vụ trọn gói
+                  3PL/Fulfillment - quản lý kho và ...
+                </p>
+              </div>
+            </a><a target="_blank" href="/" data-aos="zoom-in" data-aos-delay="700" data-aos-duration="800">
+              <div
+                class="bgnew relative mb-2 flex h-[330px] cursor-pointer flex-col items-start justify-start p-5 pb-0 hover:drop-shadow-xl max-md:ml-4 max-md:h-[330px] max-md:w-[292px] max-md:flex-none max-md:border-0 md:col-span-1">
+                <img alt="3PL/Fulfillment: Dịch vụ trọn gói tiện lợi, tối ưu chi phí logistics" loading="lazy"
+                  width="75" height="75"
+                  class="transition duration-200 ease-in-out hover:scale-105 max-md:h-[67px] max-md:w-[67px]"
+                  style="color: transparent" src="../asset/icon/tuoitre.png" />
+                <p class="mt-2 text-left text-18 font-medium max-md:text-15">
+                  3PL/Fulfillment: Dịch vụ trọn gói tiện lợi, tối ưu chi phí logistics
+                </p>
+                <p class="text-left text-15 font-normal max-md:text-14">
+                  Với những ưu thế mà mô hình 3PL/Fulfillment mang lại, ngày càng có
+                  nhiều doanh nghiệp tìm hiểu ...
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="flex justify-center">
+      <div class="my-14 flex w-full flex-col items-center justify-center max-md:mt-8">
+        <h2 class="text-center text-32 font-medium text-Sub_Color_3 max-md:text-20">
+          Khách hàng của ZAT Express
+        </h2>
+        <div class="container overflow-hidden">
+          <div class="mt-8 grid grid-cols-10 gap-2 overflow-auto max-md:hidden">
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="HerbaLife"
+                src="../asset/icon/life.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Chanel"
+                src="../asset/icon/chanel.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Unicity"
+                src="../asset/icon/unicity.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="FPT" src="../asset/icon/fpt.svg"
+                width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="TGDD"
+                src="../asset/icon/tgdd.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Amway"
+                src="../asset/icon/amway.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="ACFC"
+                src="../asset/icon/ACFC.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="SupperSport"
+                src="../asset/icon/SupperSport.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="The Face Shop"
+                src="../asset/icon/theface.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Loreal"
+                src="../asset/icon/loreal.svg" width="175" loading="lazy" height="61" />
+            </div>
+          </div>
+          <div class="mx-[120px] mt-8 grid grid-cols-8 gap-4 overflow-auto max-md:hidden">
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Hasaki"
+                src="../asset/icon/hasaki.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Schenker"
+                src="../asset/icon/schenker.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Ceva Logistics"
+                src="../asset/icon/ceva.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="DHL" src="../asset/icon/dhl.svg"
+                width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Samsung"
+                src="../asset/icon/samsung.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Sony"
+                src="../asset/icon/sony.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Acer"
+                src="../asset/icon/acer.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="TCL" src="../asset/icon/tcl.svg"
+                width="175" loading="lazy" height="61" />
+            </div>
+          </div>
+          <div class="mx-[240px] mt-8 grid grid-cols-6 gap-4 overflow-auto max-md:hidden">
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Dainkin"
+                src="../asset/icon/daikin.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Scavi"
+                src="../asset/icon/scavi.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="coats"
+                src="../asset/icon/coats.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="Avery"
+                src="../asset/icon/avary.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="prudential"
+                src="../asset/icon/prudential.svg" width="175" loading="lazy" height="61" />
+            </div>
+            <div class="relative col-span-1 flex flex-col items-center justify-center">
+              <img class="object-contain transition duration-200 max-md:w-[100px]" alt="panasonic"
+                src="../asset/icon/panasonic.svg" width="175" loading="lazy" height="61" />
+            </div>
+          </div>
+          <div class="max-md:mt-4 md:hidden my-14">
+            <div class="">
+              <div class="slick marquee">
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="40" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/chanel.svg" height="70" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/ACFC.svg" height="40" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/SupperSport.svg" alt="Placeholder" height="25" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/theface.svg" height="60" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="50" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="70" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="60" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="40" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-2">
+              <div class="slick marquee">
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="40" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/chanel.svg" height="70" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/ACFC.svg" height="40" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/SupperSport.svg" alt="Placeholder" height="25" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/theface.svg" height="60" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="50" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="70" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="60" />
+                  </div>
+                </div>
+                <div class="slick-slide">
+                  <div class="inner">
+                    <img src="../asset/icon/life.svg" height="40" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
-  <div id="footer"></div>
-  <div id="fixedfooter" class="flex justify-center"></div>
+  <footer class="flex w-full items-center justify-center bg-foooter max-md:hidden">
+    <div class="container my-8 flex flex-col items-start justify-start pb-6 max-md:flex-col max-md:px-5">
+      <div class="item-center flex w-full justify-between">
+        <img alt="logoblack" loading="lazy" width="128" height="45" class="mb-5" style="color: transparent"
+          src="../asset/icon/logont.png" />
+        <div class="flex items-center justify-end max-md:justify-center">
+          <p class="pr-[10px] text-[18px] font-medium text-slate-900">
+            Follow Us:
+          </p>
+          <div class="flex items-center justify-end">
+            <a target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="40"
+                class="max-md:mx-2 md:mr-2" style="color: transparent" src="../asset/icon/zl.svg" /></a><a
+              target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="40"
+                class="max-md:mx-2 md:mr-2" style="color: transparent" src="../asset/icon/fb.svg" /></a><a
+              target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="40"
+                class="max-md:mx-2 md:mr-2" style="color: transparent" src="../asset/icon/yt.svg" /></a><a
+              target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="40"
+                class="max-md:mx-2 md:mr-2" style="color: transparent" src="../asset/icon/ch.svg" /></a><a
+              target="_blank" href="/"><img alt="logoblack" loading="lazy" width="40" height="40"
+                class="max-md:mx-2 md:mr-2" style="color: transparent" src="../asset/icon/ios.svg" /></a>
+          </div>
+        </div>
+      </div>
+      <div class="my-[15px] h-[0.3px] w-full bg-zinc-600"></div>
+      <div class="flex w-full items-start justify-between">
+        <div class="flex w-1/3 flex-col text-Sub_Color_3 md:pr-[30px]">
+          <p class="pb-2 text-14 font-normal max-md:hidden">
+            <span class="text-[16px] font-medium leading-[30px] text-slate-900">Trụ sở chính:</span>
+            <br />18A Cộng Hòa, Phường 12, Quận Tân Bình, Tp. Hồ Chí Minh
+          </p>
+          <p class="pb-2 text-16 font-normal max-md:hidden">
+            <span class="text-[14px] font-normal text-zinc-800">Giờ làm việc:</span>
+            07:00 - 20:00
+          </p>
+          <a target="_blank" href="/"><img alt="logoblack" loading="lazy" width="134" height="50"
+              class="mt-4 max-md:hidden" src="../asset/icon/bct.png" /></a>
+        </div>
+        <div class="w-2/3 flex-col max-md:w-full max-md:items-center max-md:justify-center">
+          <div class="grid w-full grid-cols-4 max-md:grid-cols-1">
+            <div class="md:hidden" data-orientation="vertical">
+              <div data-state="closed" data-orientation="vertical" class="border-b border-b-slate-700">
+                <h3 data-orientation="vertical" data-state="closed" class="flex">
+                  <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                    Công ty
+                  </p>
+                </h3>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-b border-b-slate-700">
+                <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                  CSKH
+                </p>
+              </div>
+              <div data-state="closed" data-orientation="vertical" class="border-b border-b-slate-700">
+                <h3 data-orientation="vertical" data-state="closed" class="flex">
+                  <button type="button"
+                    class="flex flex-1 items-center justify-between py-4 font-medium transition-all">
+                    <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                      Chính sách
+                    </p>
+                  </button>
+                </h3>
+                <div data-state="closed" id="radix-:Re6fb6:" hidden="" role="region" aria-labelledby="radix-:R66fb6:"
+                  data-orientation="vertical" class="overflow-hidden text-sm transition-all"></div>
+              </div>
+            </div>
+            <div class="col-span-1 flex flex-col max-md:hidden">
+              <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                Công ty
+              </p>
+              <a class="pt-2 text-14 font-medium text-Sub_Color_3" href="gioi-thieu-chung.html#tab1">Sứ mệnh &amp; Tầm
+                nhìn</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="gioi-thieu-chung.html#tab2">Giá trị
+                cốt lõi</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="gioi-thieu-chung.html#tab3">Lãnh
+                đạo</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="gioi-thieu-chung.html#tab4">Cột mốc
+                thành tựu</a>
+            </div>
+            <div class="col-span-1 flex flex-col max-md:hidden">
+              <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                CSKH
+              </p>
+              <a class="pt-2 text-14 font-medium text-Sub_Color_3" href="cau-hoi-thuong-gap.html">Câu hỏi thường
+                gặp</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="dieu-khoan-su-dung.html">Điều khoản
+                Dịch vụ</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="chinh-sach-bao-mat.html">Chính
+                sách bảo mật</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="lien-he.html">Liên hệ</a><a
+                target="_blank" class="pt-2 text-14 font-medium text-Sub_Color_3"
+                href="https://docs.ZATExpress.vn/en">API Document</a>
+            </div>
+            <div class="col-span-1 flex flex-col max-md:hidden">
+              <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                Chính sách
+              </p>
+              <a class="pt-2 text-14 font-medium text-Sub_Color_3" href="quy-dinh-va-chinh-sach.html">Khiếu nại đền
+                bù</a><a class="pt-2 text-14 font-medium text-Sub_Color_3" href="quy-dinh-va-chinh-sach.html">Quy định
+                gửi &amp; nhận hàng</a><a class="pt-2 text-14 font-medium text-Sub_Color_3"
+                href="quy-dinh-va-chinh-sach.html">Trách nhiệm các bên</a><a
+                class="pt-2 text-14 font-medium text-Sub_Color_3" href="quy-dinh-va-chinh-sach.html">Hàng hoá cấm
+                gửi</a>
+            </div>
+            <div class="col-span-1 flex flex-col max-md:hidden">
+              <p class="text-[16px] font-medium leading-[30px] text-slate-900">
+                Liên hệ
+              </p>
+              <div class="flex py-2 text-14 font-normal max-md:hidden">
+                <span class="font-medium">Email:</span><a class="pl-2 pr-4" href="mailto:ZAT@ZATExpress.vn">
+                  <p class="word-break">ZAT@ZATExpress.vn</p>
+                </a>
+              </div>
+              <p class="pb-2 text-14 font-normal max-md:hidden">
+                <span class="font-medium">Hotline:</span><a class="pl-2" href="tel:1900 63 6688">1900 63 6688</a>
+              </p>
+            </div>
+            <p class="mt-5 pb-1 text-14 font-medium text-Sub_Color_3 md:hidden">
+              <span class="font-medium">Trụ sở chính:</span>
+              18A Cộng Hòa, Phường 12, Quận Tân Bình, Tp. Hồ Chí Minh
+            </p>
+            <p class="pb-1 text-14 font-medium text-Sub_Color_3 md:hidden">
+              <span class="font-medium">Giờ làm việc:</span>
+              07:00 - 20:00
+            </p>
+            <div class="flex pb-1 text-14 font-medium text-Sub_Color_3 md:hidden">
+              <span class="font-medium">Email:</span><a class="pl-2" href="mailto:ZAT@ZATExpress.vn">
+                <p>ZAT@ZATExpress.vn</p>
+              </a>
+            </div>
+            <p class="pb-1 text-14 font-medium text-Sub_Color_3 md:hidden">
+              <span class="font-medium">Hotline:</span><a class="pl-2" href="tel:1900 63 6688">1900 63 6688</a>
+            </p>
+            <a target="_blank" href="/"><img alt="logoblack" loading="lazy" width="134" height="50"
+                class="mt-4 md:hidden" style="color: transparent" src="../" /></a>
+          </div>
+        </div>
+      </div>
+      <p class="my-[40px] w-full text-center text-15 font-medium text-textnt max-md:hidden">
+        © 2023 ZAT Express
+      </p>
+    </div>
+  </footer>
+  <div class="flex justify-center">
+    <div
+      class="fixfoot fixed inset-x-0 bottom-0 z-50 flex w-full items-center justify-center bg-white p-4 max-md:p-2 md:h-[54px]">
+      <div class="container flex items-center justify-center text-Sub_Color_1">
+        <div
+          class="flex items-center justify-between divide-x divide-Sub_Color_3 rounded-[10px] p-2 text-[#606060] max-md:w-full">
+          <a class="flex items-center justify-center px-2 text-[#606060] max-md:w-1/3" href="../html/Tracuu.html"><img
+              class="pl-1" src="../asset/icon/package.svg" alt="ZAT Express" />
+            <p class="pl-2 text-16 font-medium text-[#606060] max-md:text-13">
+              Tra cứu vận đơn
+            </p>
+          </a><a class="flex items-center justify-center px-2 max-md:w-1/3" href="../html/TraCuoc.html"><img
+              class="pl-1" src="../asset/icon/cost.svg" alt="ZAT Express" />
+            <p class="pl-2 text-16 font-medium text-[#606060] max-md:text-13">
+              Ước tính cước phí
+            </p>
+          </a><a class="flex items-center justify-center px-2 max-md:w-1/3" href="/"><img class="pl-1"
+              src="../asset/icon/loc.svg" alt="ZAT Express" />
+            <p class="pl-2 text-16 font-medium text-[#606060] max-md:text-13">
+              Tìm kiếm bưu cục
+            </p>
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   <script src="/js/include.js"></script>
@@ -38,6 +1225,205 @@
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script>
     AOS.init({
+    });
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "100%";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+    $(document).ready(function () {
+      // show firt menu
+      // $("#nav li").first().addClass("active").find("ul").show();
+
+      $("#nav > li > a").click(function (e) {
+        e.preventDefault();
+
+        var $submenu = $(this).next("ul");
+
+        if (!$(this).hasClass("active")) {
+          $("#nav li ul").slideUp();
+          $submenu.slideDown();
+          $("#nav li a").removeClass("active");
+          $(this).addClass("active");
+        } else {
+          $submenu.slideUp();
+          $(this).removeClass("active");
+        }
+      });
+    });
+    var swiper = new Swiper(".swiper-container", {
+      autoplay: {
+        delay: 3000,
+        disableOnInteraction: false,
+      },
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    let tabsActive = 1;
+
+    function activeTab(data) {
+      for (let i = 1; i <= 2; i++) {
+        const wrapper = document.getElementById(`wrapper_${i}`);
+        wrapper.style.display = "none";
+      }
+      const selectedWrapper = document.getElementById(`wrapper_${data}`);
+      selectedWrapper.style.display = "flex";
+
+      for (let i = 1; i <= 2; i++) {
+        const tabText = document.getElementById(`tab${i}Text`);
+        const tabIndicator = document.getElementById(`tab${i}Indicator`);
+
+        tabText.classList.remove("active-p");
+        tabIndicator.style.height = "0";
+      }
+
+      const selectedTabText = document.getElementById(`tab${data}Text`);
+      const selectedTabIndicator = document.getElementById(`tab${data}Indicator`);
+
+      selectedTabText.classList.add("active-p");
+      selectedTabIndicator.style.height = "5px";
+      selectedTabIndicator.style.width = "60%";
+
+      tabsActive = data;
+    }
+    window.addEventListener("load", activeTab(1));
+    new SlimSelect({
+      select: "#selectElement",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement2",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement3",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement4",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement5",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    new SlimSelect({
+      select: "#selectElement6",
+      data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+    });
+    document
+      .querySelectorAll(".lvideo")
+      .forEach((d) => d.addEventListener("click", playVideos));
+    const body = document.body;
+
+    function playVideos(e) {
+      lvideo(e.currentTarget.dataset.url);
+
+      body.classList.add("lvideo-active");
+
+      var lvideoWrap = document.createElement("DIV");
+      lvideoWrap.setAttribute("id", "lvideo-wrap");
+      document.body.appendChild(lvideoWrap);
+
+      const wrapper = document.getElementById("lvideo-wrap");
+      wrapper.classList.add("active");
+
+      const url = this.dataset.url;
+
+      const startModal = `<span onclick="lvideoClose();" class="lvideo-overlay"></span> <div class="lvideo-container">`;
+      const finishModal = `</div><button onclick="lvideoClose();" class="lvideo-close">x</button>`;
+
+      if (url.indexOf("youtube") !== -1 || url.indexOf("youtu") !== -1) {
+        const ytUrl = [this.dataset.url];
+
+        var i,
+          r,
+          regExp =
+            /^.*(?:(?:youtu\.be\/|v\/|vi\/|u\/\w\/|embed\/)|(?:(?:watch)?\?v(?:i)?=|\&v(?:i)?=))([^#\&\?]*).*/;
+
+        for (i = 0; i < ytUrl.length; ++i) {
+          r = ytUrl[i].match(regExp);
+
+          document.getElementById(
+            "lvideo-wrap"
+          ).innerHTML = `${startModal}<iframe width="560" height="315" title="YouTube Video" src='https://www.youtube.com/embed/${r[1]}?rel=0&autoplay=1&mute=1&loop=1&playlist=${r[1]}' frameborder="0" allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>${finishModal}`;
+        }
+      } else if (url.indexOf("vimeo") !== -1) {
+        const vimeoURL = this.dataset.url;
+        const regExp = /https:\/\/(www\.)?vimeo.com\/(\d+)($|\/)/;
+
+        const match = vimeoURL.match(regExp);
+
+        if (match) {
+          document.getElementById(
+            "lvideo-wrap"
+          ).innerHTML = `${startModal}<iframe title="Vimeo" src="https://player.vimeo.com/video/${match[2]}?autoplay=1&loop=1" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>${finishModal}`;
+        } else {
+          alert("Not a Vimeo!  URL example:\n https://vimeo.com/120206922");
+        }
+      } else if (url.indexOf("mp4") !== -1 || url.indexOf("m4v") !== -1) {
+        document.getElementById(
+          "lvideo-wrap"
+        ).innerHTML = `${startModal}<video controls loop playsinline autoplay><source src='${this.dataset.url}' type="video/mp4"></video>${finishModal}`;
+      } else {
+        alert("No video link found.");
+      }
+    }
+
+    const lvideoClose = () => {
+      body.classList.remove("lvideo-active");
+
+      const wrapper = document.getElementById("lvideo-wrap");
+      wrapper.parentNode.removeChild(wrapper);
+    };
+
+    function lvideo() { }
+    jQuery(document).ready(function ($) {
+      $(".slick.marquee").slick({
+        speed: 8000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        centerMode: false,
+        cssEase: "linear",
+        slidesToShow: 1,
+        draggable: false,
+        focusOnSelect: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: true,
+        initialSlide: 1,
+        arrows: false,
+        buttons: false,
+      });
+    });
+
+    jQuery(document).ready(function ($) {
+      $(".slick.marquee_rtl").slick({
+        speed: 8000,
+        autoplay: true,
+        autoplaySpeed: 0,
+        centerMode: false,
+        cssEase: "linear",
+        draggable: false,
+        focusOnSelect: false,
+        pauseOnFocus: false,
+        pauseOnHover: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        variableWidth: true,
+        infinite: true,
+        initialSlide: 1,
+        arrows: false,
+        buttons: false,
+        rtl: true,
+      });
     });
   </script>
 </body>

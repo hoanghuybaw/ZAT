@@ -1322,7 +1322,7 @@ video {
 }
 .bg-Main_Color_1 {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 216 0 / var(--tw-bg-opacity)) ;
+  background-color: #dd0506 ;
 }
 .bg-Main_Color_3 {
   --tw-bg-opacity: 1;
@@ -1378,7 +1378,7 @@ video {
 }
 .bg-ZAT {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 216 0 / var(--tw-bg-opacity)) ;
+  background-color: #dd0506 ;
 }
 .bg-slate-100 {
   --tw-bg-opacity: 1;
@@ -1900,7 +1900,7 @@ video {
 }
 .text-ZAT {
   --tw-text-opacity: 1;
-  color: rgb(253 216 0 / var(--tw-text-opacity));
+  color: #fff;
 }
 .text-red {
   --tw-text-opacity: 1;
@@ -2644,14 +2644,14 @@ tr.ant-table-measure-row {
   --tw-bg-opacity: 1;
   background-color: rgb(255 247 198 / var(--tw-bg-opacity));
 }
-.hover\:bg-\[\#484848\]:hover,
+.hover\:bg-\[\#dd0506\]:hover,
 .hover\:bg-black:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(72 72 72 / var(--tw-bg-opacity));
+  background-color: #dd0506;
 }
 .hover\:bg-ZAT:hover {
   --tw-bg-opacity: 1;
-  background-color: rgb(253 216 0 / var(--tw-bg-opacity)) ;
+  background-color: #dd0506 ;
 }
 .hover\:bg-white:hover {
   --tw-bg-opacity: 1;
@@ -2659,7 +2659,7 @@ tr.ant-table-measure-row {
 }
 .hover\:text-ZAT:hover {
   --tw-text-opacity: 1;
-  color: rgb(253 216 0 / var(--tw-text-opacity));
+  color: #fff;
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
@@ -3387,7 +3387,7 @@ tr.ant-table-measure-row {
   }
   .md\:bg-ZAT {
     --tw-bg-opacity: 1;
-    background-color: rgb(253 216 0 / var(--tw-bg-opacity)) ;
+    background-color: #dd0506 ;
   }
   .md\:bg-white {
     --tw-bg-opacity: 1;
@@ -3466,7 +3466,7 @@ tr.ant-table-measure-row {
   }
   .md\:hover\:text-ZAT:hover {
     --tw-text-opacity: 1;
-    color: rgb(253 216 0 / var(--tw-text-opacity));
+    color: #fff;
   }
 }
 .\[\&\:has\(\[role\=checkbox\]\)\]\:pr-0:has([role="checkbox"]) {
@@ -3522,4 +3522,31 @@ tr.ant-table-measure-row {
 }
 .__Home {
   font-family: __myFont_30c743, __myFont_Fallback_30c743;
+}
+.slide-tracuu {
+  background: url("../asset/img/tracuu.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+.style_img {
+  translate: none;
+  rotate: none;
+  scale: none;
+  opacity: 1;
+  transform: translate(0px, 0px);
+}
+.active-p {
+  font-size: 24px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+div[role="combobox"] {
+  height: 40px;
+  border-radius: 8px;
 }

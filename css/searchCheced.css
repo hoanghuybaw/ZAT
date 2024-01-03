@@ -1,0 +1,54 @@
+.active-p {
+  font-size: 24px;
+}
+
+.grid-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+div[role="combobox"] {
+  height: 40px;
+  border-radius: 8px;
+}
+.checked {
+  position: relative;
+}
+.checked_item {
+  position: absolute;
+  top: -20%;
+}
+.checked_item_2 {
+  padding-top: 5rem;
+}
+.table-bill {
+  width: 100%;
+  white-space: normal;
+}
+.table-bill td {
+  border: none !important;
+  text-align: left;
+  word-break: break-all;
+}
+.table-bill tbody th {
+  border: none !important;
+  position: unset;
+  width: 32%;
+  word-break: break-all;
+}
+.table-bill thead th {
+  padding: 0.5rem 1rem;
+  position: unset;
+  word-break: break-all;
+}
+.table-bill thead th:first-child {
+  width: 32%;
+  position: unset;
+  word-break: break-all;
+}
+@media (max-width: 768px) {
+  .checked_item {
+    top: -8%;
+  }
+}
