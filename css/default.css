@@ -2278,7 +2278,7 @@ video {
   z-index: 99;
 }
 .bgnew {
-  background-image: url(/asset/img/bgnew.svg);
+  background-image: url(../asset/img/bgnew.svg);
   background-repeat: no-repeat;
   background-size: auto;
   height: 330px;
@@ -2659,7 +2659,7 @@ tr.ant-table-measure-row {
 }
 .hover\:text-ZAT:hover {
   --tw-text-opacity: 1;
-  color: #fff;
+  color: #fff !important;
 }
 .hover\:underline:hover {
   text-decoration-line: underline;
