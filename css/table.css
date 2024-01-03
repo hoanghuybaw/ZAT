@@ -4,7 +4,7 @@ table {
     border-collapse: separate;
     border-spacing: 0;
     table-layout: fixed;
-    border: 1px solid rgb(253 216 0/var(--tw-bg-opacity));
+    border: 1px solid #dd0604;
 }
 
 table td,
@@ -14,6 +14,7 @@ table th {
 }
 
 table thead th {
+    color: #fff;
     padding: 3px;
     position: sticky;
     top: 0;
@@ -25,7 +26,7 @@ table thead th {
     padding: 1rem;
     font-weight: 600;
     font-size: 16px;
-    background: rgb(253 216 0/var(--tw-bg-opacity));
+    background: #dd0604;
 }
 
 table td {
@@ -33,7 +34,7 @@ table td {
     padding: 4px 5px;
     text-align: center;
     font-size: 16px;
-    border: 1px solid rgb(253 216 0/var(--tw-bg-opacity));
+    border: 1px solid #dd0604;
 }
 
 table tbody th {
@@ -42,7 +43,7 @@ table tbody th {
     position: relative;
     font-size: 16px;
     line-height: 20px;
-    border: 1px solid rgb(253 216 0/var(--tw-bg-opacity));
+    border: 1px solid #dd0604;
 }
 
 table thead th:first-child {
