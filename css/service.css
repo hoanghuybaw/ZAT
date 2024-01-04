@@ -67,16 +67,16 @@
     transition: transform calc(var(--d) * 2) var(--e);
   }
   .card-content:nth-child(1):before {
-    background-image: url(../asset/img/zat_img.jpg);
+    background-image: url(../asset/img/Service_4.png);
   }
   .card-content:nth-child(2):before {
-    background-image: url(../asset/img/zat_img.jpg);
+    background-image: url(../asset/img/Service_1.png);
   }
   .card-content:nth-child(3):before {
-    background-image: url(../asset/img/zat_img.jpg);
+    background-image: url(../asset/img/Service_2.png);
   }
   .card-content:nth-child(4):before {
-    background-image: url(../asset/img/zat_img.jpg);
+    background-image: url(../asset/img/Service_3.png);
   }
 
   .content {
@@ -116,6 +116,11 @@
     color: white;
     background-color: black;
     border: none;
+  }
+  .neon {
+    color: #fff;
+    text-shadow: 0 0 10px #dd0506, 0 0 20px #dd0506, 0 0 50px #dd0506,
+      0 0 100px #dd0506, 0 0 200px #dd0506;
   }
   .btn:hover {
     background-color: #0d0d0d;
