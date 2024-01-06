@@ -1,0 +1,149 @@
+<section class="wwww">
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col">
+                <div class="card-container" id="demo">
+                    <div class="cardww" tabindex="0">
+                        <img src="/asset/img/Service_1.png" width="100%">
+                        <div class="title">
+                            <span class="base-title">chuyen phat nhanh</span>
+                            <p class="subTitle">Là dịch vụ vận chuyển hàng hóa từ Việt Nam đến các quốc gia khác trên
+                                thế giới thông qua
+                                đường hàng không, đường biển, đường bộ… với giá cước cạnh tranh, thời gian hợp lý, an
+                                toàn và phát tận tay người nhận.</p>
+                        </div>
+                    </div>
+                    <div class="cardww" tabindex="0">
+                        <img src="/asset/img/Service_1.png" width="100%">
+                        <div class="title">
+                            <span class="base-title">chuyen phat nhanh</span>
+                            <p class="subTitle">Là dịch vụ vận chuyển hàng hóa từ Việt Nam đến các quốc gia khác trên
+                                thế giới thông qua
+                                đường hàng không, đường biển, đường bộ… với giá cước cạnh tranh, thời gian hợp lý, an
+                                toàn và phát tận tay người nhận.</p>
+                        </div>
+                    </div>
+                    <div class="cardww" tabindex="0">
+                        <img src="/asset/img/Service_1.png" width="100%">
+                        <div class="title">
+                            <span class="base-title">chuyen phat nhanh</span>
+                            <p class="subTitle">Là dịch vụ vận chuyển hàng hóa từ Việt Nam đến các quốc gia khác trên
+                                thế giới thông qua
+                                đường hàng không, đường biển, đường bộ… với giá cước cạnh tranh, thời gian hợp lý, an
+                                toàn và phát tận tay người nhận.</p>
+                        </div>
+                    </div>
+                    <div class="cardww" tabindex="0">
+                        <img src="/asset/img/Service_1.png" width="100%">
+                        <div class="title">
+                            <span class="base-title">chuyen phat nhanh</span>
+                            <p class="subTitle">Là dịch vụ vận chuyển hàng hóa từ Việt Nam đến các quốc gia khác trên
+                                thế giới thông qua
+                                đường hàng không, đường biển, đường bộ… với giá cước cạnh tranh, thời gian hợp lý, an
+                                toàn và phát tận tay người nhận.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style>
+    .card-container {
+        padding-top: 50px;
+        display: flex;
+        gap: 40px;
+    }
+
+    .title {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 96px;
+        width: 230px;
+        transition: all 0.8s ease-in-out;
+        overflow: hidden;
+    }
+
+    .base-title {
+        padding-top: 0.5rem;
+        font-size: 20px;
+    }
+
+    .subTitle {
+        display: none;
+        padding: 0 1rem;
+        font-size: 14px;
+        -webkit-font-smoothing: antialiased
+    }
+
+    .card-container .cardww:hover .subTitle,
+    .card-container .cardww:focus .subTitle {
+        display: block !important;
+        padding: 0 1rem;
+    }
+
+    .card-container .cardww:hover .title,
+    .card-container .cardww:focus .title {
+        height: 183px;
+        width: 270px;
+        transition: all 0.8s ease-in-out;
+    }
+
+    .card-container .cardww:hover img,
+    .card-container .cardww:focus img {
+        filter: grayscale(0%);
+    }
+
+    .card-container .cardww {
+        transition: all 0.8s ease-in-out;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 0 15px 0px rgba(0, 0, 0, 0.2);
+        height: 384px;
+        width: 270px;
+        border-radius: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .cardww img {
+        width: 270px;
+        height: 288px;
+        display: block;
+        object-fit: cover;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        filter: grayscale(100%);
+        transition: filter 0.3s ease;
+    }
+
+    .card-container .cardww:hover,
+    .card-container .cardww:focus {
+        outline: none;
+        transition: all 0.8s ease-in-out;
+        -webkit-transform: scale(1.2, 1.2);
+        transform: scale(1.2, 1.2);
+    }
+
+    .card-container .cardww:hover~.cardww:nth-child(2),
+    .card-container .cardww:focus~.cardww:nth-child(2) {
+        transform: translateX(0.5rem);
+        transition: all var(50s) ease;
+    }
+
+    .card-container .cardww:hover~.cardww:nth-child(3),
+    .card-container .cardww:focus~.cardww:nth-child(3) {
+        transform: translateX(0.5rem);
+        transition: all var(50s) ease;
+    }
+
+    .card-container .cardww:hover~.cardww:nth-child(4),
+    .card-container .cardww:focus~.cardww:nth-child(4) {
+        transform: translateX(0.5rem);
+        transition: all var(50s) ease;
+    }
+</style>

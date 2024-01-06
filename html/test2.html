@@ -1,0 +1,68 @@
+<div class="d-flex card-group">
+    <div class="card">
+        <img src="/asset/img/Service_1.png" alt="">
+        <div class="title">abcd</div>
+    </div>
+    <div class="card">
+        <img src="/asset/img/Service_1.png" alt="">
+        <div class="title">abcd</div>
+    </div>
+    <div class="card">
+        <img src="/asset/img/Service_1.png" alt="">
+        <div class="title">abcd</div>
+    </div>
+    <div class="card">
+        <img src="/asset/img/Service_1.png" alt="">
+        <div class="title">abcd</div>
+    </div>
+</div>
+
+<style>
+    .d-flex {
+        display: flex;
+        gap: 10px;
+    }
+
+    .title {
+        text-align: center;
+    }
+
+    .card {
+        border-radius: 1rem;
+        height: 384px;
+        width: 270px;
+        translate: none;
+        rotate: none;
+        scale: none;
+        opacity: 1;
+        transform: translate(0px, 0px);
+        background: rgb(255, 255, 255);
+        animation-name: zoom;
+    }
+
+    .card img {
+        color: transparent;
+        width: 270px;
+        height: 288px;
+        object-fit: cover;
+    }
+
+    .card:hover {
+        -webkit-transform: scale(1, 1);
+        transform: scale(1, 1);
+        opacity: 0.5;
+    }
+
+    @keyframes zoom {
+        from {
+            object-position: 0 50%;
+        }
+
+        to {
+            object-position: 100% 50%;
+        }
+    }
+    .card-group .card:focus~.card {
+        transform: translateX(11rem);
+    }
+</style>
