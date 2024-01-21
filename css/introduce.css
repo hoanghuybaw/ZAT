@@ -1,5 +1,5 @@
 .card_introduce {
-  width: 100vw;
+  width: 100%;
   height: calc(9 / 16 * 70vw);
   max-height: 70vh;
   display: flex;
